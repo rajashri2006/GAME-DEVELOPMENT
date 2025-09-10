@@ -18,6 +18,66 @@ Step 5 − Plot the pixel by successfully incrementing x and y coordinates accor
 
 **Program :**
 
+```
+#include <graphics.h>
+#include <conio.h>
+#include <dos.h>
+#include <math.h>
+#include <stdio.h>   
+
+void DDA(int x1, int y1, int x2, int y2) {
+    float dx, dy, steps;
+    float x, y, xInc, yInc;
+    int i;
+
+    dx = x2 - x1;
+    dy = y2 - y1;
+
+    steps = (fabs(dx) > fabs(dy)) ? fabs(dx) : fabs(dy);
+
+    xInc = dx / steps;
+    yInc = dy / steps;
+
+    x = x1;
+    y = y1;
+
+    for (i = 0; i <= steps; i++) {
+        putpixel((int)(x + 0.5), (int)(y + 0.5), WHITE);
+        x += xInc;
+        y += yInc;
+        delay(10);  
+    }
+}
+
+int main() {
+    int gd = DETECT, gm;
+    int x1, y1, x2, y2;
+
+   
+    initgraph(&gd, &gm, "C:\\TURBOC3\\BGI"); 
+
+    printf("Register Number:212224040261");
+    printf("Name : RAJASHRI");
+    printf("Enter x1, y1: ");
+    scanf("%d %d", &x1, &y1);
+
+    printf("Enter x2, y2: ");
+    scanf("%d %d", &x2, &y2);
+
+    
+    DDA(x1, y1, x2, y2);
+
+    getch();         
+    closegraph();    
+
+    return 0;
+}
+```
+
 **Output :**
 
+![out](https://github.com/user-attachments/assets/5d179519-5dae-4d83-ac71-02bfcb02e876)
+
 **Result :**
+
+Thus, the implementation of  DDA algorithm to draw a line using a c coding is executed successfully.
