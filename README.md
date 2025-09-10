@@ -76,7 +76,8 @@ int main() {
 
 **Output :**
 
-![out](https://github.com/user-attachments/assets/5d179519-5dae-4d83-ac71-02bfcb02e876)
+<img width="571" height="363" alt="image" src="https://github.com/user-attachments/assets/839f5a42-42d5-4df0-b4da-25cff800c77c" />
+
 
 **Result :**
 
